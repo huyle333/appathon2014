@@ -9,8 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-//test commit
-//hello world
+
 @property (strong, nonatomic) UIWindow *window;
 
 @end
