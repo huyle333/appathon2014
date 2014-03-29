@@ -119,12 +119,29 @@
                         <outlet property="passwordField" destination="VJ1-6S-SUh" id="yh5-Ox-5tu"/>
                         <outlet property="reenterPasswordField" destination="7il-7N-hlG" id="bNy-LF-ppY"/>
                         <outlet property="usernameField" destination="fVk-VV-5Vc" id="Pdu-Wg-qfv"/>
-                        <segue destination="m5r-Xz-rvx" kind="modal" identifier="login" id="rKb-Af-f4f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xPT-5L-ZP9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1081" y="281"/>
+            <point key="canvasLocation" x="1093" y="291"/>
+        </scene>
+        <!--Simple View Controller-->
+        <scene sceneID="z6J-W8-bEH">
+            <objects>
+                <viewController id="DrT-4i-3hs" customClass="SimpleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4oQ-lI-Yil"/>
+                        <viewControllerLayoutGuide type="bottom" id="gWM-q6-9ao"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EbC-ap-Z1J">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g2j-OE-4d1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1614" y="267"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="b0T-Pt-B5P">
@@ -164,6 +181,7 @@
                                 </state>
                                 <connections>
                                     <action selector="loginAction:" destination="veI-PS-wJR" eventType="touchUpInside" id="GcJ-AE-6D3"/>
+                                    <segue destination="DrT-4i-3hs" kind="modal" identifier="login" id="7nX-vP-wpG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -173,7 +191,6 @@
                     <connections>
                         <outlet property="loginPasswordField" destination="joL-3U-uty" id="65h-0f-BuW"/>
                         <outlet property="loginUsernameField" destination="BHL-yL-VKI" id="jAF-XL-DEU"/>
-                        <segue destination="m5r-Xz-rvx" kind="modal" identifier="login" id="WQ6-1w-SLp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2FB-EQ-QrO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -240,7 +257,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="rKb-Af-f4f"/>
-    </inferredMetricsTieBreakers>
 </document>

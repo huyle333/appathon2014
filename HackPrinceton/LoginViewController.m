@@ -43,7 +43,7 @@
 - (IBAction)loginAction:(id)sender {
     [PFUser logInWithUsernameInBackground:_loginUsernameField.text password:_loginPasswordField.text block:^(PFUser *user, NSError *error){
         if(!error){
-            NSLog(@"Login user:");
+            NSLog(@"Loginning user.");
             [self performSegueWithIdentifier:@"login" sender:self];
         }
         if(error){
