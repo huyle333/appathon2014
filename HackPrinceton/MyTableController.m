@@ -8,6 +8,20 @@
 
 #import "MyTableController.h"
 
+@interface MyTableController() <UISearchDisplayDelegate, UISearchBarDelegate>{
+
+}
+
+@property (nonatomic, strong) UISearchBar *searchBar;
+@property (nonatomic, strong) UISearchDisplayController *searchController;
+@property (nonatomic, strong) NSMutableArray *searchResults;
+
+@end
+
+@interface MyTableController ()
+
+@end
+
 @implementation MyTableController
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -33,6 +47,13 @@
         
         // The number of objects to show per page
         self.objectsPerPage = 5;
+        self.tableView.rowHeight = 60;
+        
+        //append the add button and title to the navigation bar
+        /*UIBarButtonItem* addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                                                                   target:self
+                                                                                   action:@selector(addListing)];
+        [self.navigationItem setRightBarButtonItem:addButton];*/
     }
     return self;
 }
@@ -48,6 +69,24 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    
+    self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44)];
+    
+    self.tableView.tableHeaderView = self.searchBar;
+    
+    self.searchController = [[UISearchDisplayController alloc] initWithSearchBar:self.searchBar contentsController:self];
+    
+    self.searchController.searchResultsDataSource = self;
+    self.searchController.searchResultsDelegate = self;
+    self.searchController.delegate = self;
+    
+    
+    CGPoint offset = CGPointMake(0, self.searchBar.frame.size.height);
+    self.tableView.contentOffset = offset;
+    
+    self.searchResults = [NSMutableArray array];
 }
 
 - (void)viewDidUnload
@@ -105,6 +144,41 @@
     // This method is called before a PFQuery is fired to get more objects
 }
 
+- (void)filterResults:(NSString *)searchTerm {
+    
+    [self.searchResults removeAllObjects];
+    
+    PFQuery *query = [PFQuery queryWithClassName: @"User"];
+    [query whereKeyExists:@"username"];  //this is based on whatever query you are trying to accomplish
+    [query whereKey:@"username" containsString:searchTerm];
+    
+    NSArray *results  = [query findObjects];
+    
+    //NSLog(@"%@", results);
+    //NSLog(@"%u", results.count);
+    
+    [self.searchResults addObjectsFromArray:results];
+}
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
+    [self filterResults:searchString];
+    return YES;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    if (tableView == self.tableView) {
+        //if (tableView == self.searchDisplayController.searchResultsTableView) {
+        
+        return self.objects.count;
+        
+    } else {
+        
+        return self.searchResults.count;
+        
+    }
+    
+}
 
 // Override to customize what kind of query to perform on the class. The default is to query for
 // all objects ordered by createdAt descending.
@@ -126,17 +200,22 @@
 
 // Override to customize the look of a cell representing an object. The default is to display
 // a UITableViewCellStyleDefault style cell with the label being the first key in the object.
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
-    static NSString *CellIdentifier = @"Cell";
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
+                        object:(PFObject *)object
+{
+    static NSString *cellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    PFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (!cell) {
+        cell = [[PFTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
+                                      reuseIdentifier:cellIdentifier];
     }
     
-    // Configure the cell
-    cell.textLabel.text = [object objectForKey:@"contact"];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"Priority: %@", [object objectForKey:@"priority"]];
+    // Configure the cell to show todo item with a priority at the bottom
+    cell.textLabel.text = object[@"contact"];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Priority: %@",
+                                 object[@"priority"]];
     
     return cell;
 }

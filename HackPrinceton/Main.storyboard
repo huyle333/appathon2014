@@ -90,6 +90,7 @@
                                 </state>
                                 <connections>
                                     <action selector="registerAction:" destination="HMy-XI-BZv" eventType="touchUpInside" id="5l9-f6-cuq"/>
+                                    <segue destination="KnM-vg-2dN" kind="modal" identifier="login" id="Nne-0f-scn"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VJ1-6S-SUh">
@@ -125,7 +126,7 @@
             </objects>
             <point key="canvasLocation" x="1093" y="291"/>
         </scene>
-        <!--Simple View Controller-->
+        <!--Simple View Controller - Contacts-->
         <scene sceneID="z6J-W8-bEH">
             <objects>
                 <viewController id="DrT-4i-3hs" customClass="SimpleViewController" sceneMemberID="viewController">
@@ -138,10 +139,49 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Contacts" id="3MY-Rc-0au"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g2j-OE-4d1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1614" y="267"/>
+            <point key="canvasLocation" x="2387" y="-76"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Ift-JQ-I8D">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="KnM-vg-2dN" sceneMemberID="viewController">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="n2E-ma-qrh">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="D3d-e1-JHy" kind="relationship" relationship="viewControllers" id="SIJ-Bi-h3z"/>
+                        <segue destination="DrT-4i-3hs" kind="relationship" relationship="viewControllers" id="uCF-aE-iyq"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hzk-4m-IEl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1611" y="291"/>
+        </scene>
+        <!--View Controller - History-->
+        <scene sceneID="WxK-r4-Pfm">
+            <objects>
+                <viewController id="D3d-e1-JHy" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g1A-Ng-Lm4"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Ih-b3-ysv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c0r-O2-OKR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="History" id="a21-qh-73V"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H6f-dy-DpF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2387" y="631"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="b0T-Pt-B5P">
@@ -181,7 +221,7 @@
                                 </state>
                                 <connections>
                                     <action selector="loginAction:" destination="veI-PS-wJR" eventType="touchUpInside" id="GcJ-AE-6D3"/>
-                                    <segue destination="DrT-4i-3hs" kind="modal" identifier="login" id="7nX-vP-wpG"/>
+                                    <segue destination="KnM-vg-2dN" kind="modal" identifier="login" id="Xse-IZ-0oH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -257,4 +297,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="Nne-0f-scn"/>
+    </inferredMetricsTieBreakers>
 </document>
