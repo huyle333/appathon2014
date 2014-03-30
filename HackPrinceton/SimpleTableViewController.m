@@ -16,6 +16,9 @@
 
 @implementation SimpleTableViewController
 
+@synthesize window;
+@synthesize rootController;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -39,6 +42,8 @@
 -(void)viewDidAppear:(BOOL)animated{
     
     [super viewDidAppear:animated];
+    
+    [window addSubview:rootController.view];
     
     // Custom initialization
     MyTableController *controller = [[MyTableController alloc] init];
