@@ -139,6 +139,7 @@
                     <connections>
                         <segue destination="D3d-e1-JHy" kind="relationship" relationship="viewControllers" id="SIJ-Bi-h3z"/>
                         <segue destination="g4E-kw-tla" kind="relationship" relationship="viewControllers" id="dKI-UG-hUu"/>
+                        <segue destination="V9h-w2-i1x" kind="relationship" relationship="viewControllers" id="anf-0o-0h1"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzk-4m-IEl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -173,6 +174,171 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I7R-F8-VLS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2381" y="-61"/>
+        </scene>
+        <!--Canvas View Controller - Chat-->
+        <scene sceneID="cEI-mY-r7Q">
+            <objects>
+                <viewController id="V9h-w2-i1x" customClass="CanvasViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fL3-ss-KNA"/>
+                        <viewControllerLayoutGuide type="bottom" id="K4k-2m-gUO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SlL-qu-zzH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LSr-ot-5FD" customClass="ACEDrawingView">
+                                <rect key="frame" x="0.0" y="21" width="320" height="498"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b3G-2C-dvI">
+                                <rect key="frame" x="-5" y="389" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem image="photo.png" id="bF8-GT-VHz">
+                                        <connections>
+                                            <action selector="camera:" destination="V9h-w2-i1x" id="vvd-oe-Z3N"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem image="gnome_media_record.png" style="plain" id="4Nq-Tx-137">
+                                        <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="recordVoice:" destination="V9h-w2-i1x" id="SEt-Tc-IBc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem image="media_play.png" id="Ffj-4f-8l9">
+                                        <connections>
+                                            <action selector="playRecord:" destination="V9h-w2-i1x" id="8ff-j7-urH"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="fnp-J2-Hhf"/>
+                                    <barButtonItem title="Cc" id="2un-CY-TlT">
+                                        <connections>
+                                            <action selector="caption:" destination="V9h-w2-i1x" id="tbf-Og-Ttx"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem image="save_file.png" id="hDq-Il-gau">
+                                        <connections>
+                                            <action selector="saveFile:" destination="V9h-w2-i1x" id="U2e-4S-goz"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem image="email.png" id="4b2-Sy-zpU">
+                                        <connections>
+                                            <action selector="email:" destination="V9h-w2-i1x" id="rY8-wY-ZA5"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gml-1p-esk">
+                                <rect key="frame" x="0.0" y="21" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem image="br_prev.png" id="NYN-Ff-hq2"/>
+                                    <barButtonItem image="undo.png" id="Z8P-i7-o7X">
+                                        <connections>
+                                            <action selector="undo:" destination="V9h-w2-i1x" id="2vv-zE-itn"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem image="redo.png" id="Gtk-6a-GXM">
+                                        <connections>
+                                            <action selector="redo:" destination="V9h-w2-i1x" id="NlG-UH-21d"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="6lT-di-sf9"/>
+                                    <barButtonItem image="alpha.png" id="ryb-kh-nD3">
+                                        <connections>
+                                            <action selector="toggleAlphaSlide:" destination="V9h-w2-i1x" id="a0P-y4-pcf"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem image="line_width.png" id="yZN-vs-oIh">
+                                        <connections>
+                                            <action selector="toggleWidthSlide:" destination="V9h-w2-i1x" id="L5p-Gl-gg0"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem image="pencil.png" id="W6L-PJ-meJ">
+                                        <connections>
+                                            <action selector="tool:" destination="V9h-w2-i1x" id="gfB-pf-Vrh"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem image="colour_picker.png" id="Loi-3W-66T">
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="color:" destination="V9h-w2-i1x" id="LVy-s6-DEz"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem image="eraser.png" id="PeO-Z8-zb1">
+                                        <connections>
+                                            <action selector="eraser:" destination="V9h-w2-i1x" id="C15-VN-L8r"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <slider hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="0.0" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="kTn-nW-XWL">
+                                <rect key="frame" x="18" y="78" width="284" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="changeWidth:" destination="V9h-w2-i1x" eventType="valueChanged" id="Qwb-gT-0hm"/>
+                                </connections>
+                            </slider>
+                            <slider hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.10000000149011612" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="vVF-G5-jrV">
+                                <rect key="frame" x="18" y="78" width="284" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="changeAlpha:" destination="V9h-w2-i1x" eventType="valueChanged" id="oLj-qE-rBd"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6d-nC-4mi">
+                                <rect key="frame" x="148" y="398" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="round_minus.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="hidden:" destination="V9h-w2-i1x" eventType="touchUpInside" id="Fm0-4P-EOB"/>
+                                </connections>
+                            </button>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kH2-TJ-4Eg">
+                                <rect key="frame" x="20" y="344" width="280" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.91845346719999998" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" selected="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Chat" id="FpK-J9-ZcQ"/>
+                    <connections>
+                        <outlet property="alphaButton" destination="ryb-kh-nD3" id="Cwo-DM-JwN"/>
+                        <outlet property="alphaSlide" destination="vVF-G5-jrV" id="077-XO-PD9"/>
+                        <outlet property="cameraButton" destination="bF8-GT-VHz" id="aew-pj-LtV"/>
+                        <outlet property="captionButton" destination="2un-CY-TlT" id="OlQ-it-9fI"/>
+                        <outlet property="captionTextView" destination="kH2-TJ-4Eg" id="iGw-5F-jSh"/>
+                        <outlet property="colorButton" destination="Loi-3W-66T" id="FS7-Us-UoG"/>
+                        <outlet property="drawingView" destination="LSr-ot-5FD" id="khN-Mj-igC"/>
+                        <outlet property="emailButton" destination="4b2-Sy-zpU" id="C8K-Ro-why"/>
+                        <outlet property="eraserButton" destination="PeO-Z8-zb1" id="srW-PW-Gg4"/>
+                        <outlet property="footToolBar" destination="b3G-2C-dvI" id="7hr-kq-V50"/>
+                        <outlet property="headToolBar" destination="Gml-1p-esk" id="h1O-YD-nRj"/>
+                        <outlet property="hiddenButton" destination="k6d-nC-4mi" id="oPP-Dr-4hs"/>
+                        <outlet property="playButton" destination="Ffj-4f-8l9" id="Td2-0a-EcR"/>
+                        <outlet property="redoButton" destination="Gtk-6a-GXM" id="7oV-02-zHV"/>
+                        <outlet property="saveFileButton" destination="hDq-Il-gau" id="76J-ZC-jdI"/>
+                        <outlet property="toolButton" destination="W6L-PJ-meJ" id="kID-CD-EAM"/>
+                        <outlet property="undoButton" destination="Z8P-i7-o7X" id="ne5-La-bux"/>
+                        <outlet property="voiceButton" destination="4Nq-Tx-137" id="HGi-pI-bEf"/>
+                        <outlet property="widthButton" destination="yZN-vs-oIh" id="n3W-LC-RWT"/>
+                        <outlet property="widthSlide" destination="kTn-nW-XWL" id="Zoy-7c-llh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5y1-Bp-5UO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2793" y="263"/>
         </scene>
         <!--View Controller - History-->
         <scene sceneID="WxK-r4-Pfm">
@@ -302,6 +468,22 @@
             <point key="canvasLocation" x="28" y="61"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="alpha.png" width="25" height="25"/>
+        <image name="br_prev.png" width="25" height="25"/>
+        <image name="colour_picker.png" width="25" height="25"/>
+        <image name="email.png" width="25" height="25"/>
+        <image name="eraser.png" width="25" height="25"/>
+        <image name="gnome_media_record.png" width="25" height="25"/>
+        <image name="line_width.png" width="25" height="25"/>
+        <image name="media_play.png" width="25" height="25"/>
+        <image name="pencil.png" width="25" height="25"/>
+        <image name="photo.png" width="25" height="25"/>
+        <image name="redo.png" width="25" height="25"/>
+        <image name="round_minus.png" width="25" height="25"/>
+        <image name="save_file.png" width="25" height="25"/>
+        <image name="undo.png" width="25" height="25"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
