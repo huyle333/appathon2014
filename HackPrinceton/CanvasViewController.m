@@ -17,7 +17,6 @@
 
 @interface CanvasViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate, UIPopoverControllerDelegate, UIActionSheetDelegate, ACEDrawingViewDelegate, AVAudioRecorderDelegate, AVAudioPlayerDelegate, UITextViewDelegate>
 {
-@private BOOL recording;
 @private BOOL playing;
 @private BOOL editing;
 @private UIImage * toolImage;
@@ -101,7 +100,6 @@
 {
     // indexOfPage = 0;
     focusOnEraserButton = NO;
-    recording = NO;
     playing = NO;
     
     self.alphaSlide.hidden = TRUE;
@@ -468,6 +466,12 @@
 
 - (IBAction)email:(UIBarButtonItem *)sender
 {
+    // prepare for sending email
+    self.imageForSendingEmail = self.drawingView.image;
+    self.recordedFileUrl = recorder.url;
+    
+    // now lead the page to contact page
+    
 }
 
 - (IBAction)toggleAlphaSlide:(UIBarButtonItem *)sender
@@ -597,7 +601,6 @@
         // [recordPauseButton setTitle:@"Record" forState:UIControlStateNormal];
         
         [sender setImage:[UIImage imageNamed:@"gnome_media_record.png"]];
-        recording = FALSE;
         self.playButton.enabled = YES;
     }
     
