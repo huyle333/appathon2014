@@ -50,7 +50,7 @@ static NSString* const paginationCellId=@"PaginationCellId";
 - (void)viewDidLoad{
     [super viewDidLoad];
     
-    self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44)];
+    self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 100, 44)];
     self.tableView.tableHeaderView = self.searchBar;
     self.searchBar.delegate = self;
     

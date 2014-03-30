@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:HackPrinceton.xcodeproj">
+      location = "self:Optimal.xcodeproj">
    </FileRef>
 </Workspace>

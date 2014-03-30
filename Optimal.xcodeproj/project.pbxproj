@@ -18,6 +18,7 @@
 		7568F50A18E81AF800D44634 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7568F4FE18E81AF800D44634 /* AFURLSessionManager.m */; };
 		7568F50B18E81AF800D44634 /* sendgrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 7568F50118E81AF800D44634 /* sendgrid.m */; };
 		7568F50C18E82A9F00D44634 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7522C24418E8029E00A8F496 /* Parse.framework */; };
+		7568F50E18E8434900D44634 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7568F50D18E8434900D44634 /* Images-2.xcassets */; };
 		E569012A18E82F0F00138C85 /* HistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E569012918E82F0F00138C85 /* HistoryTableViewController.m */; };
 		E5E1C25418E66A08007CC6E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5E1C25318E66A08007CC6E6 /* Foundation.framework */; };
 		E5E1C25618E66A08007CC6E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5E1C25518E66A08007CC6E6 /* CoreGraphics.framework */; };
@@ -25,7 +26,6 @@
 		E5E1C25E18E66A08007CC6E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5E1C25C18E66A08007CC6E6 /* InfoPlist.strings */; };
 		E5E1C26018E66A08007CC6E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E1C25F18E66A08007CC6E6 /* main.m */; };
 		E5E1C26418E66A08007CC6E6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E1C26318E66A08007CC6E6 /* AppDelegate.m */; };
-		E5E1C26618E66A08007CC6E6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5E1C26518E66A08007CC6E6 /* Images.xcassets */; };
 		E5E1C26D18E66A08007CC6E6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5E1C26C18E66A08007CC6E6 /* XCTest.framework */; };
 		E5E1C26E18E66A08007CC6E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5E1C25318E66A08007CC6E6 /* Foundation.framework */; };
 		E5E1C26F18E66A08007CC6E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5E1C25718E66A08007CC6E6 /* UIKit.framework */; };
@@ -119,22 +119,22 @@
 		7568F4FE18E81AF800D44634 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		7568F50018E81AF800D44634 /* sendgrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sendgrid.h; sourceTree = "<group>"; };
 		7568F50118E81AF800D44634 /* sendgrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sendgrid.m; sourceTree = "<group>"; };
+		7568F50D18E8434900D44634 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
 		E569012818E82F0F00138C85 /* HistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryTableViewController.h; sourceTree = "<group>"; };
 		E569012918E82F0F00138C85 /* HistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryTableViewController.m; sourceTree = "<group>"; };
-		E5E1C25018E66A08007CC6E6 /* HackPrinceton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackPrinceton.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5E1C25018E66A08007CC6E6 /* Optimal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Optimal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5E1C25318E66A08007CC6E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E5E1C25518E66A08007CC6E6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		E5E1C25718E66A08007CC6E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		E5E1C25B18E66A08007CC6E6 /* HackPrinceton-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HackPrinceton-Info.plist"; sourceTree = "<group>"; };
+		E5E1C25B18E66A08007CC6E6 /* Optimal-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Optimal-Info.plist"; sourceTree = "<group>"; };
 		E5E1C25D18E66A08007CC6E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E5E1C25F18E66A08007CC6E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E5E1C26118E66A08007CC6E6 /* HackPrinceton-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HackPrinceton-Prefix.pch"; sourceTree = "<group>"; };
+		E5E1C26118E66A08007CC6E6 /* Optimal-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Optimal-Prefix.pch"; sourceTree = "<group>"; };
 		E5E1C26218E66A08007CC6E6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E5E1C26318E66A08007CC6E6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E5E1C26518E66A08007CC6E6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		E5E1C26B18E66A08007CC6E6 /* HackPrincetonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackPrincetonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5E1C26B18E66A08007CC6E6 /* OptimalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OptimalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5E1C26C18E66A08007CC6E6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		E5E1C27418E66A08007CC6E6 /* HackPrincetonTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HackPrincetonTests-Info.plist"; sourceTree = "<group>"; };
+		E5E1C27418E66A08007CC6E6 /* OptimalTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OptimalTests-Info.plist"; sourceTree = "<group>"; };
 		E5E1C27618E66A08007CC6E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E5E1C27818E66A08007CC6E6 /* HackPrincetonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HackPrincetonTests.m; sourceTree = "<group>"; };
 		E5E1C28218E6706C007CC6E6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -284,8 +284,8 @@
 		E5E1C25118E66A08007CC6E6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E5E1C25018E66A08007CC6E6 /* HackPrinceton.app */,
-				E5E1C26B18E66A08007CC6E6 /* HackPrincetonTests.xctest */,
+				E5E1C25018E66A08007CC6E6 /* Optimal.app */,
+				E5E1C26B18E66A08007CC6E6 /* OptimalTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -335,7 +335,7 @@
 				E5E1C29E18E6A31E007CC6E6 /* LoginViewController.h */,
 				E5E1C29F18E6A31E007CC6E6 /* LoginViewController.m */,
 				E5E1C29918E67D3C007CC6E6 /* RegisterViewController.m */,
-				E5E1C26518E66A08007CC6E6 /* Images.xcassets */,
+				7568F50D18E8434900D44634 /* Images-2.xcassets */,
 				E5E1C25A18E66A08007CC6E6 /* Supporting Files */,
 			);
 			path = HackPrinceton;
@@ -344,10 +344,10 @@
 		E5E1C25A18E66A08007CC6E6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E5E1C25B18E66A08007CC6E6 /* HackPrinceton-Info.plist */,
+				E5E1C25B18E66A08007CC6E6 /* Optimal-Info.plist */,
 				E5E1C25C18E66A08007CC6E6 /* InfoPlist.strings */,
 				E5E1C25F18E66A08007CC6E6 /* main.m */,
-				E5E1C26118E66A08007CC6E6 /* HackPrinceton-Prefix.pch */,
+				E5E1C26118E66A08007CC6E6 /* Optimal-Prefix.pch */,
 				E5E1C2BD18E77F02007CC6E6 /* MyTableController.h */,
 				E5E1C2BE18E77F02007CC6E6 /* MyTableController.m */,
 			);
@@ -366,7 +366,7 @@
 		E5E1C27318E66A08007CC6E6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E5E1C27418E66A08007CC6E6 /* HackPrincetonTests-Info.plist */,
+				E5E1C27418E66A08007CC6E6 /* OptimalTests-Info.plist */,
 				E5E1C27518E66A08007CC6E6 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -427,9 +427,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E5E1C24F18E66A08007CC6E6 /* HackPrinceton */ = {
+		E5E1C24F18E66A08007CC6E6 /* Optimal */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E5E1C27C18E66A08007CC6E6 /* Build configuration list for PBXNativeTarget "HackPrinceton" */;
+			buildConfigurationList = E5E1C27C18E66A08007CC6E6 /* Build configuration list for PBXNativeTarget "Optimal" */;
 			buildPhases = (
 				E5E1C24C18E66A08007CC6E6 /* Sources */,
 				E5E1C24D18E66A08007CC6E6 /* Frameworks */,
@@ -439,14 +439,14 @@
 			);
 			dependencies = (
 			);
-			name = HackPrinceton;
+			name = Optimal;
 			productName = HackPrinceton;
-			productReference = E5E1C25018E66A08007CC6E6 /* HackPrinceton.app */;
+			productReference = E5E1C25018E66A08007CC6E6 /* Optimal.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E5E1C26A18E66A08007CC6E6 /* HackPrincetonTests */ = {
+		E5E1C26A18E66A08007CC6E6 /* OptimalTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E5E1C27F18E66A08007CC6E6 /* Build configuration list for PBXNativeTarget "HackPrincetonTests" */;
+			buildConfigurationList = E5E1C27F18E66A08007CC6E6 /* Build configuration list for PBXNativeTarget "OptimalTests" */;
 			buildPhases = (
 				E5E1C26718E66A08007CC6E6 /* Sources */,
 				E5E1C26818E66A08007CC6E6 /* Frameworks */,
@@ -457,9 +457,9 @@
 			dependencies = (
 				E5E1C27118E66A08007CC6E6 /* PBXTargetDependency */,
 			);
-			name = HackPrincetonTests;
+			name = OptimalTests;
 			productName = HackPrincetonTests;
-			productReference = E5E1C26B18E66A08007CC6E6 /* HackPrincetonTests.xctest */;
+			productReference = E5E1C26B18E66A08007CC6E6 /* OptimalTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -476,7 +476,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E5E1C24B18E66A08007CC6E6 /* Build configuration list for PBXProject "HackPrinceton" */;
+			buildConfigurationList = E5E1C24B18E66A08007CC6E6 /* Build configuration list for PBXProject "Optimal" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -488,8 +488,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E5E1C24F18E66A08007CC6E6 /* HackPrinceton */,
-				E5E1C26A18E66A08007CC6E6 /* HackPrincetonTests */,
+				E5E1C24F18E66A08007CC6E6 /* Optimal */,
+				E5E1C26A18E66A08007CC6E6 /* OptimalTests */,
 			);
 		};
 /* End PBXProject section */
@@ -499,6 +499,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7568F50E18E8434900D44634 /* Images-2.xcassets in Resources */,
 				E5E1C30818E7FAC7007CC6E6 /* rectangle_unfilled.png in Resources */,
 				E5E1C2F818E7FAC7007CC6E6 /* ellipse.png in Resources */,
 				E5E1C30E18E7FAC7007CC6E6 /* save_file.png in Resources */,
@@ -531,7 +532,6 @@
 				E5E1C31018E7FAC7007CC6E6 /* stop.png in Resources */,
 				E5E1C2FD18E7FAC7007CC6E6 /* layer_transparent.png in Resources */,
 				E5E1C30518E7FAC7007CC6E6 /* pencil.png in Resources */,
-				E5E1C26618E66A08007CC6E6 /* Images.xcassets in Resources */,
 				E5E1C2F718E7FAC7007CC6E6 /* ellipse_unfilled.png in Resources */,
 				E5E1C31118E7FAC7007CC6E6 /* undo.png in Resources */,
 				E5E1C2FE18E7FAC7007CC6E6 /* line_width.png in Resources */,
@@ -591,7 +591,7 @@
 /* Begin PBXTargetDependency section */
 		E5E1C27118E66A08007CC6E6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E5E1C24F18E66A08007CC6E6 /* HackPrinceton */;
+			target = E5E1C24F18E66A08007CC6E6 /* Optimal */;
 			targetProxy = E5E1C27018E66A08007CC6E6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -691,17 +691,16 @@
 		E5E1C27D18E66A08007CC6E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/huy/Documents/HackPrinceton,
 					/Users/Jeremy_luo/Desktop,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HackPrinceton/HackPrinceton-Prefix.pch";
-				INFOPLIST_FILE = "HackPrinceton/HackPrinceton-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "HackPrinceton/Optimal-Prefix.pch";
+				INFOPLIST_FILE = "HackPrinceton/Optimal-Info.plist";
+				PRODUCT_NAME = Optimal;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -710,17 +709,16 @@
 		E5E1C27E18E66A08007CC6E6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/huy/Documents/HackPrinceton,
 					/Users/Jeremy_luo/Desktop,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HackPrinceton/HackPrinceton-Prefix.pch";
-				INFOPLIST_FILE = "HackPrinceton/HackPrinceton-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "HackPrinceton/Optimal-Prefix.pch";
+				INFOPLIST_FILE = "HackPrinceton/Optimal-Info.plist";
+				PRODUCT_NAME = Optimal;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -741,8 +739,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "HackPrincetonTests/HackPrincetonTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "HackPrincetonTests/OptimalTests-Info.plist";
+				PRODUCT_NAME = OptimalTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -759,8 +757,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HackPrinceton/HackPrinceton-Prefix.pch";
-				INFOPLIST_FILE = "HackPrincetonTests/HackPrincetonTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "HackPrincetonTests/OptimalTests-Info.plist";
+				PRODUCT_NAME = OptimalTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -769,7 +767,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E5E1C24B18E66A08007CC6E6 /* Build configuration list for PBXProject "HackPrinceton" */ = {
+		E5E1C24B18E66A08007CC6E6 /* Build configuration list for PBXProject "Optimal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E5E1C27A18E66A08007CC6E6 /* Debug */,
@@ -778,7 +776,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E5E1C27C18E66A08007CC6E6 /* Build configuration list for PBXNativeTarget "HackPrinceton" */ = {
+		E5E1C27C18E66A08007CC6E6 /* Build configuration list for PBXNativeTarget "Optimal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E5E1C27D18E66A08007CC6E6 /* Debug */,
@@ -787,7 +785,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E5E1C27F18E66A08007CC6E6 /* Build configuration list for PBXNativeTarget "HackPrincetonTests" */ = {
+		E5E1C27F18E66A08007CC6E6 /* Build configuration list for PBXNativeTarget "OptimalTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E5E1C28018E66A08007CC6E6 /* Debug */,
