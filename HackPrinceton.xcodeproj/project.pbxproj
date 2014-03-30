@@ -18,6 +18,7 @@
 		7568F50A18E81AF800D44634 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7568F4FE18E81AF800D44634 /* AFURLSessionManager.m */; };
 		7568F50B18E81AF800D44634 /* sendgrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 7568F50118E81AF800D44634 /* sendgrid.m */; };
 		7568F50C18E82A9F00D44634 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7522C24418E8029E00A8F496 /* Parse.framework */; };
+		E569012A18E82F0F00138C85 /* HistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E569012918E82F0F00138C85 /* HistoryTableViewController.m */; };
 		E5E1C25418E66A08007CC6E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5E1C25318E66A08007CC6E6 /* Foundation.framework */; };
 		E5E1C25618E66A08007CC6E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5E1C25518E66A08007CC6E6 /* CoreGraphics.framework */; };
 		E5E1C25818E66A08007CC6E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5E1C25718E66A08007CC6E6 /* UIKit.framework */; };
@@ -118,6 +119,8 @@
 		7568F4FE18E81AF800D44634 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		7568F50018E81AF800D44634 /* sendgrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sendgrid.h; sourceTree = "<group>"; };
 		7568F50118E81AF800D44634 /* sendgrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sendgrid.m; sourceTree = "<group>"; };
+		E569012818E82F0F00138C85 /* HistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryTableViewController.h; sourceTree = "<group>"; };
+		E569012918E82F0F00138C85 /* HistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryTableViewController.m; sourceTree = "<group>"; };
 		E5E1C25018E66A08007CC6E6 /* HackPrinceton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackPrinceton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5E1C25318E66A08007CC6E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E5E1C25518E66A08007CC6E6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -313,6 +316,8 @@
 		E5E1C25918E66A08007CC6E6 /* HackPrinceton */ = {
 			isa = PBXGroup;
 			children = (
+				E569012818E82F0F00138C85 /* HistoryTableViewController.h */,
+				E569012918E82F0F00138C85 /* HistoryTableViewController.m */,
 				7568F4EB18E81AF800D44634 /* AFNetworking */,
 				7568F4FF18E81AF800D44634 /* Classes */,
 				E5E1C2CD18E7FA9A007CC6E6 /* img */,
@@ -558,6 +563,7 @@
 				E5E1C29A18E67D3C007CC6E6 /* RegisterViewController.m in Sources */,
 				E5E1C26018E66A08007CC6E6 /* main.m in Sources */,
 				E5E1C2C518E7F9A8007CC6E6 /* CanvasViewController.m in Sources */,
+				E569012A18E82F0F00138C85 /* HistoryTableViewController.m in Sources */,
 				7568F50B18E81AF800D44634 /* sendgrid.m in Sources */,
 				E5E1C2BF18E77F02007CC6E6 /* MyTableController.m in Sources */,
 				7568F50A18E81AF800D44634 /* AFURLSessionManager.m in Sources */,
