@@ -16,9 +16,6 @@
 
 @implementation SimpleTableViewController
 
-@synthesize window;
-@synthesize rootController;
-
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -43,13 +40,14 @@
     
     [super viewDidAppear:animated];
     
-    [window addSubview:rootController.view];
-    
     // Custom initialization
     MyTableController *controller = [[MyTableController alloc] init];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
     self.view.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:controller];
+    UIView *aView = [[UIView alloc] init];
+    aView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     [self.view.window makeKeyAndVisible];
 }
 

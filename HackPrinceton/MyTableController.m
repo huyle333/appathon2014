@@ -14,10 +14,7 @@ static NSString* const paginationCellId=@"PaginationCellId";
 
 @interface MyTableController() <UISearchDisplayDelegate, UISearchBarDelegate>
 {
-    NSInteger totalObjectsCount;        // elements count in Parse
-    NSInteger searchObjectsCount;       //total number of elements matters our search query
-    NSInteger searchLimit;              //number of elements returned by signle search query (== objsPerPage)
-    NSInteger searchStartPos;           //
+    
 }
 
 @property (nonatomic, strong) UISearchBar *searchBar;
@@ -43,9 +40,7 @@ static NSString* const paginationCellId=@"PaginationCellId";
         
         self.paginationEnabled = YES;
         
-        self.objectsPerPage = objsPerPage;
-        
-        searchLimit = objsPerPage;
+        self.objectsPerPage = 10;
     }
     return self;
 }
@@ -53,7 +48,7 @@ static NSString* const paginationCellId=@"PaginationCellId";
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad{
-    //[super viewDidLoad];
+    [super viewDidLoad];
     
     self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44)];
     self.tableView.tableHeaderView = self.searchBar;
@@ -85,6 +80,25 @@ static NSString* const paginationCellId=@"PaginationCellId";
     return [self.searchBar.text length];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
@@ -107,9 +121,9 @@ static NSString* const paginationCellId=@"PaginationCellId";
     
     [query whereKey:@"contact" containsString:searchTerm];
     
-    searchStartPos = 0;                                         //reset pagination on new search
+    //searchStartPos = 0;                                         //reset pagination on new search
     //[query setLimit:[NSNumber numberWithInt:searchLimit]];      //set max elements count
-    searchObjectsCount = [query countObjects];                  //get all elements count that matches our search criteria
+    //searchObjectsCount = [query countObjects];                  //get all elements count that matches our search criteria
     
     NSArray *results  = [query findObjects];
     
@@ -126,7 +140,7 @@ static NSString* const paginationCellId=@"PaginationCellId";
     
     [query whereKey:@"contact" containsString:self.searchBar.text];
     //[query setLimit:[NSNumber numberWithInt:searchLimit]];
-    searchStartPos += searchLimit;
+    //searchStartPos += searchLimit;
     //[query setSkip:[NSNumber numberWithInt:searchStartPos]];
     
     NSArray *results  = [query findObjects];
@@ -152,8 +166,8 @@ static NSString* const paginationCellId=@"PaginationCellId";
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     //add extra row for pagination cell if not all objects are shown
-    NSInteger result = 0;
-    if ([self weAreInSearchResults])
+    //NSInteger result = 0;
+    /*if ([self weAreInSearchResults])
     {
         result = searchObjectsCount > self.searchResults.count ? self.searchResults.count + 1 : self.searchResults.count;
     }
@@ -161,7 +175,17 @@ static NSString* const paginationCellId=@"PaginationCellId";
     {
         result = totalObjectsCount > self.objects.count ? self.objects.count + 1 : self.objects.count;
     }
-    return result;
+    return result;*/
+    if (tableView == self.tableView) {
+        //if (tableView == self.searchDisplayController.searchResultsTableView) {
+        
+        return self.objects.count;
+        
+    } else {
+        
+        return self.searchResults.count;
+        
+    }
 }
 
 
@@ -186,7 +210,7 @@ static NSString* const paginationCellId=@"PaginationCellId";
     
     [query orderByAscending:@"priority"];
     
-    totalObjectsCount = [query countObjects];      //remember total objects count
+    //totalObjectsCount = [query countObjects];      //remember total objects count
     
     return query;
 }

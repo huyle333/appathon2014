@@ -10,12 +10,8 @@
 
 @class SimpleTableViewController;
 
-@interface SimpleTableViewController : UITableViewController{
-    UIWindow *window;
-    IBOutlet UITabBarController *rootController;
-}
+@interface SimpleTableViewController : UITableViewController
 
 @property (nonatomic, retain) UIWindow *window;
-@property (nonatomic, retain) IBOutlet UITabBarController *rootController;
 
 @end
