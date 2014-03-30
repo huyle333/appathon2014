@@ -62,6 +62,6 @@
 
 // for sending email
 @property (weak, nonatomic) UIImage * imageForSendingEmail;
-@property NSURL *recordedFileUrl;
+@property NSString * pathOfAudioRecord;
 
 @end

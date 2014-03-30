@@ -60,8 +60,9 @@
     // Set the audio file
     NSArray *pathComponents = [NSArray arrayWithObjects:
                                [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject],
-                               @"MyAudioMemo.m4a",
+                               @"audioRecord.m4a",
                                nil];
+    
     NSURL *outputFileURL = [NSURL fileURLWithPathComponents:pathComponents];
     
     // Setup audio session
@@ -468,10 +469,17 @@
 {
     // prepare for sending email
     self.imageForSendingEmail = self.drawingView.image;
-    self.recordedFileUrl = recorder.url;
+
+    //*******************load locally store audio file********************//
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *audioUrl = [NSString stringWithFormat:@"%@/audioRecord.m4a", documentsDirectory];
+    self.pathOfAudioRecord = audioUrl;
+    NSLog(@"%@", audioUrl);
     
-    // now lead the page to contact page
-    
+    // get the audio data from main bundle directly into NSData object
+    NSData *audioData;
+    audioData = [[NSData alloc] initWithContentsOfFile:audioUrl];
 }
 
 - (IBAction)toggleAlphaSlide:(UIBarButtonItem *)sender
