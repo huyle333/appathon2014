@@ -60,4 +60,8 @@
 - (IBAction)playRecord:(UIBarButtonItem *)sender;
 
 
+// for sending email
+@property (weak, nonatomic) UIImage * imageForSendingEmail;
+@property NSURL *recordedFileUrl;
+
 @end
