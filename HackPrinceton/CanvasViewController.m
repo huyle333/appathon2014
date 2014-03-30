@@ -17,6 +17,7 @@
 
 @interface CanvasViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate, UIPopoverControllerDelegate, UIActionSheetDelegate, ACEDrawingViewDelegate, AVAudioRecorderDelegate, AVAudioPlayerDelegate, UITextViewDelegate>
 {
+@private BOOL recorded;
 @private BOOL playing;
 @private BOOL editing;
 @private UIImage * toolImage;
@@ -576,6 +577,7 @@
 
 - (IBAction)recordVoice:(UIBarButtonItem *)sender
 {
+    recorded = YES;
     /*
      if (!recording)
      {
@@ -735,7 +737,10 @@
     msg.from = @"bar@foo.com";
     msg.text = @"hello world";
     msg.html = @"<h1>hello world</h1>";
-    msg.audioPath = self.pathOfAudioRecord;
+    if (recorded)
+        msg.audioPath = self.pathOfAudioRecord;
+    else
+        msg.audioPath = nil;
     
     //**html message to use when setting inline photos as true**
     //msg.inlinePhoto = true;
@@ -757,7 +762,7 @@
     
     //Send email through Web API Transport
     [msg sendWithWeb];
-    NSLog(@"OK");
+    // NSLog(@"OK");
 }
 
 @end

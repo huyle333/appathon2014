@@ -82,9 +82,12 @@ NSString * const sgEndpoint = @"api/mail.send.json";
             NSData *imageData = UIImagePNGRepresentation(self.img);
             [formData appendPartWithFileData:imageData name:@"files[image.png]" fileName:@"image.png" mimeType:@"image/png"];
         }
-        NSData *audioAttachment = [NSData dataWithContentsOfFile:self.audioPath];
+        if (self.audioPath) {
+            
+            NSData *audioAttachment = [NSData dataWithContentsOfFile:self.audioPath];
         
-        [formData appendPartWithFileData:audioAttachment name:@"files[audioRecord.m4a]" fileName:@"audioRecord.m4a" mimeType:@"audio/m4a"];
+            [formData appendPartWithFileData:audioAttachment name:@"files[audioRecord.m4a]" fileName:@"audioRecord.m4a" mimeType:@"audio/m4a"];
+        }
         
     } success:^(AFHTTPRequestOperation *operation, id responseObject) {
         // NSLog(@"Success: %@", responseObject);
