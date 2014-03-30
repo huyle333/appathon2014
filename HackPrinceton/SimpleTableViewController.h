@@ -1,16 +1,16 @@
 //
-//  SimpleViewController.h
+//  SimpleTableViewController.h
 //  HackPrinceton
 //
-//  Created by Huy on 3/29/14.
+//  Created by Huy on 3/30/14.
 //  Copyright (c) 2014 Huy Le. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@class SimpleViewController;
+@class SimpleTableViewController;
 
-@interface SimpleViewController : UIViewController
+@interface SimpleTableViewController : UITableViewController
 
 @property (nonatomic, retain) UIWindow *window;
 
