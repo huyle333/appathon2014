@@ -10,6 +10,7 @@
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <AVFoundation/AVFoundation.h>
 #import <QuartzCore/QuartzCore.h>
+#import "sendgrid.h"
 
 @class ACEDrawingView;
 
@@ -63,5 +64,6 @@
 // for sending email
 @property (weak, nonatomic) UIImage * imageForSendingEmail;
 @property NSString * pathOfAudioRecord;
+@property NSString * captionForEmail;
 
 @end

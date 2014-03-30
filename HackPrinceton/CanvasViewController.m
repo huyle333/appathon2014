@@ -469,6 +469,7 @@
 {
     // prepare for sending email
     self.imageForSendingEmail = self.drawingView.image;
+    self.captionForEmail = self.captionTextView.text;
 
     //*******************load locally store audio file********************//
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -480,6 +481,10 @@
     // get the audio data from main bundle directly into NSData object
     NSData *audioData;
     audioData = [[NSData alloc] initWithContentsOfFile:audioUrl];
+    
+    
+    // hard code send email
+    [self sendMsg];
 }
 
 - (IBAction)toggleAlphaSlide:(UIBarButtonItem *)sender
@@ -716,6 +721,43 @@
     self.captionTextView.center = CGPointMake(160, 394);
     
     [UIView commitAnimations];
+}
+
+- (void)sendMsg
+{
+    //create Email Object
+    sendgrid *msg = [sendgrid user:@"cprak" andPass:@"abcd1234"];
+    
+    //set parameters
+    msg.subject = @"testing format";
+    msg.to = @"corey.prak@gmail.com";
+    
+    msg.from = @"bar@foo.com";
+    msg.text = @"hello world";
+    msg.html = @"<h1>hello world</h1>";
+    msg.audioPath = self.pathOfAudioRecord;
+    
+    //**html message to use when setting inline photos as true**
+    //msg.inlinePhoto = true;
+    //msg.html = @"<img src =\"cid:image.png\"><h1>hello world</h1>";
+    
+    //adding unique arguments
+    NSDictionary *uarg = @{@"customerAccountNumber":@"55555",
+                           @"activationAttempt": @"1"};
+    
+    //adding categories
+    NSString *replyto = @"billing_notifications";
+    
+    [msg addCustomHeader:uarg withKey:@"unique_args"];
+    [msg addCustomHeader:replyto withKey:@"category"];
+    
+    //Image attachment
+    [msg attachImage:self.imageForSendingEmail];
+    
+    
+    //Send email through Web API Transport
+    [msg sendWithWeb];
+    NSLog(@"OK");
 }
 
 @end
