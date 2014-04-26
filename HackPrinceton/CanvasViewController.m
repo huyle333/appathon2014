@@ -732,7 +732,7 @@
     
     //set parameters
     msg.subject = @"testing format";
-    msg.to = @"corey.prak@gmail.com";
+    msg.to = @"huyle333@gmail.com";
     
     msg.from = @"bar@foo.com";
     msg.text = @"hello world";

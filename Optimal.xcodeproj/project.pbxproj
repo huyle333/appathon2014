@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48883BAB190BC669003F71DC /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5E1C28418E6790E007CC6E6 /* Parse.framework */; };
+		48883BBB190BC765003F71DC /* chatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 48883BB3190BC765003F71DC /* chatCell.m */; };
+		48883BBC190BC765003F71DC /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48883BB4190BC765003F71DC /* MainStoryboard.storyboard */; };
 		7568F50218E81AF800D44634 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7568F4ED18E81AF800D44634 /* AFHTTPRequestOperation.m */; };
 		7568F50318E81AF800D44634 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7568F4EF18E81AF800D44634 /* AFHTTPRequestOperationManager.m */; };
 		7568F50418E81AF800D44634 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7568F4F118E81AF800D44634 /* AFHTTPSessionManager.m */; };
@@ -17,7 +20,6 @@
 		7568F50918E81AF800D44634 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 7568F4FC18E81AF800D44634 /* AFURLResponseSerialization.m */; };
 		7568F50A18E81AF800D44634 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7568F4FE18E81AF800D44634 /* AFURLSessionManager.m */; };
 		7568F50B18E81AF800D44634 /* sendgrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 7568F50118E81AF800D44634 /* sendgrid.m */; };
-		7568F50C18E82A9F00D44634 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7522C24418E8029E00A8F496 /* Parse.framework */; };
 		7568F50E18E8434900D44634 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7568F50D18E8434900D44634 /* Images-2.xcassets */; };
 		E569012A18E82F0F00138C85 /* HistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E569012918E82F0F00138C85 /* HistoryTableViewController.m */; };
 		E5E1C25418E66A08007CC6E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5E1C25318E66A08007CC6E6 /* Foundation.framework */; };
@@ -97,7 +99,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7522C24418E8029E00A8F496 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../../../Desktop/Parse.framework; sourceTree = "<group>"; };
+		48883BB2190BC765003F71DC /* chatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chatCell.h; sourceTree = "<group>"; };
+		48883BB3190BC765003F71DC /* chatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chatCell.m; sourceTree = "<group>"; };
+		48883BB4190BC765003F71DC /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		7568F4EC18E81AF800D44634 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		7568F4ED18E81AF800D44634 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		7568F4EE18E81AF800D44634 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -206,7 +210,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7568F50C18E82A9F00D44634 /* Parse.framework in Frameworks */,
+				E5E1C28718E67976007CC6E6 /* AudioToolbox.framework in Frameworks */,
+				48883BAB190BC669003F71DC /* Parse.framework in Frameworks */,
 				E5E1C2A218E6A980007CC6E6 /* libz.1.1.3.dylib in Frameworks */,
 				E5E1C29718E679BA007CC6E6 /* SystemConfiguration.framework in Frameworks */,
 				E5E1C29518E679B1007CC6E6 /* StoreKit.framework in Frameworks */,
@@ -217,7 +222,6 @@
 				E5E1C28B18E6798D007CC6E6 /* CoreLocation.framework in Frameworks */,
 				E5E1C25618E66A08007CC6E6 /* CoreGraphics.framework in Frameworks */,
 				E5E1C28918E6797D007CC6E6 /* CFNetwork.framework in Frameworks */,
-				E5E1C28718E67976007CC6E6 /* AudioToolbox.framework in Frameworks */,
 				E5E1C25818E66A08007CC6E6 /* UIKit.framework in Frameworks */,
 				E5E1C25418E66A08007CC6E6 /* Foundation.framework in Frameworks */,
 			);
@@ -293,7 +297,6 @@
 		E5E1C25218E66A08007CC6E6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7522C24418E8029E00A8F496 /* Parse.framework */,
 				E5E1C2A118E6A980007CC6E6 /* libz.1.1.3.dylib */,
 				E5E1C29618E679BA007CC6E6 /* SystemConfiguration.framework */,
 				E5E1C29418E679B1007CC6E6 /* StoreKit.framework */,
@@ -316,6 +319,9 @@
 		E5E1C25918E66A08007CC6E6 /* HackPrinceton */ = {
 			isa = PBXGroup;
 			children = (
+				48883BB2190BC765003F71DC /* chatCell.h */,
+				48883BB3190BC765003F71DC /* chatCell.m */,
+				48883BB4190BC765003F71DC /* MainStoryboard.storyboard */,
 				E569012818E82F0F00138C85 /* HistoryTableViewController.h */,
 				E569012918E82F0F00138C85 /* HistoryTableViewController.m */,
 				7568F4EB18E81AF800D44634 /* AFNetworking */,
@@ -527,6 +533,7 @@
 				E5E1C2F118E7FAC7007CC6E6 /* br_next.png in Resources */,
 				E5E1C30C18E7FAC7007CC6E6 /* round_checkmark.png in Resources */,
 				E5E1C2FF18E7FAC7007CC6E6 /* line.png in Resources */,
+				48883BBC190BC765003F71DC /* MainStoryboard.storyboard in Resources */,
 				E5E1C30118E7FAC7007CC6E6 /* media_record.png in Resources */,
 				E5E1C2FC18E7FAC7007CC6E6 /* gnome_media_record.png in Resources */,
 				E5E1C31018E7FAC7007CC6E6 /* stop.png in Resources */,
@@ -569,6 +576,7 @@
 				7568F50A18E81AF800D44634 /* AFURLSessionManager.m in Sources */,
 				7568F50918E81AF800D44634 /* AFURLResponseSerialization.m in Sources */,
 				E5E1C2CC18E7FA16007CC6E6 /* ACEDrawingView.m in Sources */,
+				48883BBB190BC765003F71DC /* chatCell.m in Sources */,
 				E5E1C2A018E6A31E007CC6E6 /* LoginViewController.m in Sources */,
 				7568F50818E81AF800D44634 /* AFURLRequestSerialization.m in Sources */,
 				7568F50518E81AF800D44634 /* AFNetworkReachabilityManager.m in Sources */,
@@ -696,6 +704,8 @@
 					"$(inherited)",
 					/Users/huy/Documents/HackPrinceton,
 					/Users/Jeremy_luo/Desktop,
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/HackPrinceton",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HackPrinceton/Optimal-Prefix.pch";
@@ -714,6 +724,8 @@
 					"$(inherited)",
 					/Users/huy/Documents/HackPrinceton,
 					/Users/Jeremy_luo/Desktop,
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/HackPrinceton",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HackPrinceton/Optimal-Prefix.pch";
